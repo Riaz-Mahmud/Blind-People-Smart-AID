@@ -1,0 +1,376 @@
+<resources>
+    <string name="app_name">TfLiteImageClassification</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="toggle_turn_on">NN:On</string>
+    <string name="toggle_turn_off">NN:Off</string>
+    <string name="toggle">Use NNAPI</string>
+    <string name="tflite">tflite</string>
+    <string name="nnapi">NNAPI</string>
+    <string name="threads">Threads:</string>
+
+    <string name="model">Model:</string>
+    <string-array name="models">
+        <item>Quantized</item>
+        <item>Float</item>
+    </string-array>
+
+    <string name="device">Device:</string>
+    <string name="currency_detect">Currency Detect</string>
+    <string name="todo">todo</string>
+    <string name="color_pick">Color Pick</string>
+    <string name="object_detection">Object Detection</string>
+    <string-array name="devices">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string name="vibrant">Vibrant</string>
+    <string name="vibrant_light">Vibrant Light</string>
+    <string name="vibrant_dark">Vibrant Dark</string>
+    <string name="muted">Muted</string>
+    <string name="muted_light">Muted Light</string>
+    <string name="muted_dark">Muted Dark</string>
+    <string name="colors_palette">Colors Palette</string>
+
+    <string-array name="colorCode">
+        <item>0048BA</item>
+        <item>B0BF1A</item>
+        <item>7CB9E8</item>
+        <item>C0E8D5</item>
+        <item>B284BE</item>
+        <item>72A0C1</item>
+        <item>EDEAE0</item>
+        <item>F0F8FF</item>
+        <item>C46210</item>
+        <item>EFDECD</item>
+        <item>E52B50</item>
+        <item>9F2B68</item>
+        <item>F19CBB</item>
+        <item>AB274F</item>
+        <item>D3212D</item>
+        <item>3B7A57</item>
+        <item>FFBF00</item>
+        <item>FF7E00</item>
+        <item>9966CC</item>
+        <item>3DDC84</item>
+        <item>CD9575</item>
+        <item>665D1E</item>
+        <item>915C83</item>
+        <item>841B2D</item>
+        <item>FAEBD7</item>
+        <item>008000</item>
+        <item>8DB600</item>
+        <item>FBCEB1</item>
+        <item>00FFFF</item>
+        <item>7FFFD4</item>
+        <item>D0FF14</item>
+        <item>4B5320</item>
+        <item>8F9779</item>
+        <item>E9D66B</item>
+        <item>B2BEB5</item>
+        <item>87A96B</item>
+        <item>FF9966</item>
+        <item>A52A2A</item>
+        <item>FDEE00</item>
+        <item>568203</item>
+        <item>007FFF</item>
+        <item>F0FFFF</item>
+        <item>89CFF0</item>
+        <item>A1CAF1</item>
+        <item>F4C2C2</item>
+        <item>FEFEFA</item>
+        <item>FF91AF</item>
+        <item>FAE7B5</item>
+        <item>DA1884</item>
+        <item>7C0A02</item>
+        <item>848482</item>
+        <item>BCD4E6</item>
+        <item>9F8170</item>
+        <item>F5F5DC</item>
+        <item>2E5894</item>
+        <item>9C2542</item>
+        <item>FFE4C4</item>
+        <item>3D2B1F</item>
+        <item>967117</item>
+        <item>CAE00D</item>
+        <item>BFFF00</item>
+        <item>FE6F5E</item>
+        <item>BF4F51</item>
+        <item>000000</item>
+        <item>3D0C02</item>
+        <item>1B1811</item>
+        <item>3B2F2F</item>
+        <item>54626F</item>
+        <item>3B3C36</item>
+        <item>BFAFB2</item>
+        <item>FFEBCD</item>
+        <item>A57164</item>
+        <item>318CE7</item>
+        <item>ACE5EE</item>
+        <item>FAF0BE</item>
+        <item>660000</item>
+        <item>0000FF</item>
+        <item>1F75FE</item>
+        <item>0093AF</item>
+        <item>0087BD</item>
+        <item>0018A8</item>
+        <item>333399</item>
+        <item>0247FE</item>
+        <item>A2A2D0</item>
+        <item>6699CC</item>
+        <item>0D98BA</item>
+        <item>0D98BA</item>
+        <item>5DADEC</item>
+        <item>126180</item>
+        <item>8A2BE2</item>
+        <item>7366BD</item>
+        <item>4D1A7F</item>
+        <item>5072A7</item>
+        <item>3C69E7</item>
+        <item>DE5D83</item>
+        <item>79443B</item>
+        <item>E3DAC9</item>
+        <item>006A4E</item>
+        <item>87413F</item>
+        <item>CB4154</item>
+        <item>66FF00</item>
+        <item>D891EF</item>
+        <item>C32148</item>
+        <item>1974D2</item>
+        <item>1974D2</item>
+        <item>FF55A3</item>
+        <item>FB607F</item>
+        <item>004225</item>
+        <item>CD7F32</item>
+        <item>88540B</item>
+        <item>AF6E4D</item>
+        <item>1B4D3E</item>
+        <item>7BB661</item>
+        <item>FFC680</item>
+        <item>800020</item>
+        <item>DEB887</item>
+        <item>A17A74</item>
+        <item>CC5500</item>
+        <item>E97451</item>
+        <item>8A3324</item>
+        <item>BD33A4</item>
+        <item>702963</item>
+        <item>536872</item>
+        <item>5F9EA0</item>
+        <item>A9B2C3</item>
+        <item>91A3B0</item>
+        <item>006B3C</item>
+        <item>ED872D</item>
+        <item>E30022</item>
+        <item>FFF600</item>
+        <item>A67B5B</item>
+        <item>4B3621</item>
+        <item>A3C1AD</item>
+        <item>C19A6B</item>
+        <item>EFBBCC</item>
+        <item>FFFF99</item>
+        <item>FFEF00</item>
+        <item>FF0800</item>
+        <item>E4717A</item>
+        <item>00BFFF</item>
+        <item>592720</item>
+        <item>C41E3A</item>
+        <item>00CC99</item>
+        <item>960018</item>
+        <item>D70040</item>
+        <item>FFA6C9</item>
+        <item>B31B1B</item>
+        <item>56A0D3</item>
+        <item>ED9121</item>
+        <item>00563F</item>
+        <item>703642</item>
+        <item>C95A49</item>
+        <item>ACE1AF</item>
+        <item>007BA7</item>
+        <item>2F847C</item>
+        <item>B2FFFF</item>
+        <item>246BCE</item>
+        <item>DE3163</item>
+        <item>007BA7</item>
+        <item>2A52BE</item>
+        <item>6D9BC3</item>
+        <item>1DACD6</item>
+        <item>007AA5</item>
+        <item>E03C31</item>
+        <item>F7E7CE</item>
+        <item>FFFF00</item>
+        <item>FFFFFF</item>
+    </string-array>
+    <string-array name="colorName">
+        <item>Absolute Zero</item>
+        <item>Acid green</item>
+        <item>Aero</item>
+        <item>Aero blue</item>
+        <item>African violet</item>
+        <item>Air superiority blue</item>
+        <item>Alabaster</item>
+        <item>Alice blue</item>
+        <item>Alloy orange</item>
+        <item>Almond</item>
+        <item>Amaranth</item>
+        <item>Amaranth</item>
+        <item>Amaranth pink</item>
+        <item>Amaranth purple</item>
+        <item>Amaranth red</item>
+        <item>Amazon</item>
+        <item>Amber</item>
+        <item>Amber (SAE/ECE)</item>
+        <item>Amethyst</item>
+        <item>Android green</item>
+        <item>Antique brass</item>
+        <item>Antique bronze</item>
+        <item>Antique fuchsia</item>
+        <item>Antique ruby</item>
+        <item>Antique white</item>
+        <item>Ao (English)</item>
+        <item>Apple green</item>
+        <item>Apricot</item>
+        <item>Aqua</item>
+        <item>Aquamarine</item>
+        <item>Arctic lime</item>
+        <item>Army green</item>
+        <item>Artichoke</item>
+        <item>Arylide yellow</item>
+        <item>Ash gray</item>
+        <item>Asparagus</item>
+        <item>Atomic tangerine</item>
+        <item>Auburn</item>
+        <item>Aureolin</item>
+        <item>Avocado</item>
+        <item>Azure</item>
+        <item>Azure (X11/web color)</item>
+        <item>Baby blue</item>
+        <item>Baby blue eyes</item>
+        <item>Baby pink</item>
+        <item>Baby powder</item>
+        <item>Baker-Miller pink</item>
+        <item>Banana Mania</item>
+        <item>Barbie Pink</item>
+        <item>Barn red</item>
+        <item>Battleship grey</item>
+        <item>Beau blue</item>
+        <item>Beaver</item>
+        <item>Beige</item>
+        <item>B dazzled blue</item>
+        <item>Big dip o’ruby</item>
+        <item>Bisque</item>
+        <item>Bistre</item>
+        <item>Bistre brown</item>
+        <item>Bitter lemon</item>
+        <item>Bitter lime</item>
+        <item>Bittersweet</item>
+        <item>Bittersweet shimmer</item>
+        <item>Black</item>
+        <item>Black bean</item>
+        <item>Black chocolate</item>
+        <item>Black coffee</item>
+        <item>Black coral</item>
+        <item>Black olive</item>
+        <item>Black Shadows</item>
+        <item>Blanched almond</item>
+        <item>Blast-off bronze</item>
+        <item>Bleu de France</item>
+        <item>Blizzard blue</item>
+        <item>Blond</item>
+        <item>Blood red</item>
+        <item>Blue</item>
+        <item>Blue (Crayola)</item>
+        <item>Blue (Munsell)</item>
+        <item>Blue (NCS)</item>
+        <item>Blue (Pantone)</item>
+        <item>Blue (pigment)</item>
+        <item>Blue (RYB)</item>
+        <item>Blue bell</item>
+        <item>Blue-gray</item>
+        <item>Blue-green</item>
+        <item>Blue-green (color wheel)</item>
+        <item>Blue jeans</item>
+        <item>Blue sapphire</item>
+        <item>Blue-violet</item>
+        <item>Blue-violet (Crayola)</item>
+        <item>Blue-violet (color wheel)</item>
+        <item>Blue yonder</item>
+        <item>Bluetiful</item>
+        <item>Blush</item>
+        <item>Bole</item>
+        <item>Bone</item>
+        <item>Bottle green</item>
+        <item>Brandy</item>
+        <item>Brick red</item>
+        <item>Bright green</item>
+        <item>Bright lilac</item>
+        <item>Bright maroon</item>
+        <item>Bright navy blue</item>
+        <item>Bright yellow (Crayola)</item>
+        <item>Brilliant rose</item>
+        <item>Brink pink</item>
+        <item>British racing green</item>
+        <item>Bronze</item>
+        <item>Brown</item>
+        <item>Brown sugar</item>
+        <item>Brunswick green</item>
+        <item>Bud green</item>
+        <item>Buff</item>
+        <item>Burgundy</item>
+        <item>Burlywood</item>
+        <item>Burnished brown</item>
+        <item>Burnt orange</item>
+        <item>Burnt sienna</item>
+        <item>Burnt umber</item>
+        <item>Byzantine</item>
+        <item>Byzantium</item>
+        <item>Cadet</item>
+        <item>Cadet blue</item>
+        <item>Cadet blue (Crayola)</item>
+        <item>Cadet grey</item>
+        <item>Cadmium green</item>
+        <item>Cadmium orange</item>
+        <item>Cadmium red</item>
+        <item>Cadmium yellow</item>
+        <item>Café au lait</item>
+        <item>Café noir</item>
+        <item>Cambridge blue</item>
+        <item>Camel</item>
+        <item>Cameo pink</item>
+        <item>Canary</item>
+        <item>Canary yello</item>
+        <item>Candy apple red</item>
+        <item>Candy pink</item>
+        <item>Capri</item>
+        <item>Caput mortuum</item>
+        <item>Cardinal</item>
+        <item>Caribbean green</item>
+        <item>Carmine</item>
+        <item>Carmine (M&amp;P)</item>
+        <item>Carnation pink</item>
+        <item>Carnelian</item>
+        <item>Carolina blue</item>
+        <item>Carrot orange</item>
+        <item>Castleton green</item>
+        <item>Catawba</item>
+        <item>Cedar Chest</item>
+        <item>Celadon</item>
+        <item>Celadon blue</item>
+        <item>Celadon green</item>
+        <item>Celeste</item>
+        <item>Celtic blue</item>
+        <item>Cerise</item>
+        <item>Cerulean</item>
+        <item>Cerulean blue</item>
+        <item>Cerulean frost</item>
+        <item>Cerulean (Crayola)</item>
+        <item>CG blue</item>
+        <item>CG red</item>
+        <item>Champagne</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
+</resources>

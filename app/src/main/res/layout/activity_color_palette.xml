@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ColorPaletteActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageWallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/colorDisplay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:contentDescription="@string/todo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rgbColorTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RBG"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/hexColorTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HEX"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/colorNameTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/colors_palette"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/vibrantView"
+                style="@style/textStyle"
+                android:text="@string/vibrant" />
+
+            <TextView
+                android:id="@+id/vibrantLightView"
+                style="@style/textStyle"
+                android:text="@string/vibrant_light" />
+
+            <TextView
+                android:id="@+id/vibrantDarkView"
+                style="@style/textStyle"
+                android:text="@string/vibrant_dark" />
+
+            <TextView
+                android:id="@+id/mutedView"
+                style="@style/textStyle"
+                android:text="@string/muted" />
+
+            <TextView
+                android:id="@+id/mutedLightView"
+                style="@style/textStyle"
+                android:text="@string/muted_light" />
+
+            <TextView
+                android:id="@+id/mutedDarkView"
+                style="@style/textStyle"
+                android:text="@string/muted_dark" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
