@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +40,7 @@ public class ColorPaletteActivity extends AppCompatActivity {
     private Bitmap bitmap;
     private TextView rgbColorTxt, hexColorTxt,colorNameTxt;
     public String rgbColor, hexColor;
+    private Button openCameraBtn;
 
     String[] colorCodeItem, colorNameItem;
     TextToSpeech textToSpeech;
@@ -53,52 +57,60 @@ public class ColorPaletteActivity extends AppCompatActivity {
         colorCodeItem = getResources().getStringArray(R.array.colorCode);
         colorNameItem = getResources().getStringArray(R.array.colorName);
 
+
         imageWallpaper.setOnTouchListener((v, event) -> {
-
-            try {
-                final int action = event.getAction();
-                final int evX = (int) event.getX();
-                final int evY = (int) event.getY();
-
-                int touchColor = getColor(imageWallpaper, evX, evY);
-
-                int r = (touchColor >> 16) & 0xFF;
-                int g = (touchColor >> 8) & 0xFF;
-                int b = (touchColor >> 0) & 0xFF;
-
-                rgbColor = String.valueOf(r) + "," + String.valueOf(g) + "," + String.valueOf(b);
-                rgbColorTxt.setText("RGB:  " + rgbColor);
-
-                hexColor = Integer.toHexString(touchColor);
-                if (hexColor.length() > 2) {
-                    hexColor = hexColor.substring(2, hexColor.length());
-                    colorDisplay.setBackgroundColor(touchColor);
-                    hexColorTxt.setText("HEX:  #" + hexColor);
-
-                    for (int i = 0; i < colorCodeItem.length; i++) {
-                        if (colorCodeItem[i].equals(hexColor.toUpperCase())) {
-                            colorNameTxt.setText("Color Name: " + colorNameItem[i]);
-                            String colorName = colorNameItem[i];
-
-                            textToSpeech = new TextToSpeech(getApplicationContext(), status -> {
-                                if(status!=TextToSpeech.ERROR){
-                                    // To Choose language of speech
-                                    if (textToSpeech.isSpeaking()){
-                                        textToSpeech.stop();
-                                    }
-                                    textToSpeech.setLanguage(Locale.US);
-                                    textToSpeech.speak(colorName,TextToSpeech.QUEUE_ADD,null);
-                                }
-                            });
-                        }
-                    }
-                }
-
-            } catch (Exception e) {
-                Log.d("ImageColor", "Error: " + e);
-            }
+            imageTouch(event);
             return false;
         });
+
+        openCameraBtn.setOnClickListener(v -> CheckAndroidVersion());
+    }
+
+    private void imageTouch(MotionEvent event) {
+        try {
+            final int action = event.getAction();
+            final int evX = (int) event.getX();
+            final int evY = (int) event.getY();
+
+            int touchColor = getColor(imageWallpaper, evX, evY);
+
+            int r = (touchColor >> 16) & 0xFF;
+            int g = (touchColor >> 8) & 0xFF;
+            int b = (touchColor >> 0) & 0xFF;
+
+            rgbColor = String.valueOf(r) + "," + String.valueOf(g) + "," + String.valueOf(b);
+            rgbColorTxt.setText("RGB:  " + rgbColor);
+
+            hexColor = Integer.toHexString(touchColor);
+            if (hexColor.length() > 2) {
+                hexColor = hexColor.substring(2, hexColor.length());
+                colorDisplay.setBackgroundColor(touchColor);
+                hexColorTxt.setText("HEX:  #" + hexColor);
+
+                colorNameTxt.setText("Name: Unknown");
+
+                for (int i = 0; i < colorCodeItem.length; i++) {
+                    if (colorCodeItem[i].equals(hexColor.toUpperCase())) {
+                        colorNameTxt.setText("Name: " + colorNameItem[i]);
+                        String colorName = colorNameItem[i];
+
+                        textToSpeech = new TextToSpeech(getApplicationContext(), status -> {
+                            if(status!=TextToSpeech.ERROR){
+                                // To Choose language of speech
+                                if (textToSpeech.isSpeaking()){
+                                    textToSpeech.stop();
+                                }
+                                textToSpeech.setLanguage(Locale.US);
+                                textToSpeech.speak(colorName,TextToSpeech.QUEUE_ADD,null);
+                            }
+                        });
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            Log.d("ImageColor", "Error: " + e);
+        }
     }
 
     private int getColor(ImageView image, int evX, int evY) {
@@ -120,6 +132,7 @@ public class ColorPaletteActivity extends AppCompatActivity {
         hexColorTxt = findViewById(R.id.hexColorTxt);
         colorDisplay = findViewById(R.id.colorDisplay);
         colorNameTxt = findViewById(R.id.colorNameTxt);
+        openCameraBtn = findViewById(R.id.openCameraBtn);
 
     }
 
