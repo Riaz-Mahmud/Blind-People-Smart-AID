@@ -8,6 +8,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,6 +28,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical">
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,7 +124,7 @@
                 android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/settingView"
+                    android:id="@+id/incomingObjectCard"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -135,13 +148,13 @@
                             android:layout_gravity="center"
                             android:contentDescription="@string/todo"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/object_detection" />
+                            android:src="@drawable/incoing_object" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="@string/object_detection"
+                            android:text="Incoming Object"
                             android:textColor="@color/black"
                             android:textSize="21sp" />
 
@@ -190,7 +203,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 
 </LinearLayout>
