@@ -108,7 +108,7 @@ public abstract class CameraActivity extends AppCompatActivity
     private Model model = Model.FLOAT;
     private Device device = Device.CPU;
     private int numThreads = -1;
-    MediaPlayer mp, mp1, mp2;
+    MediaPlayer fifty, one_hun, five_hun, one_thou;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -349,9 +349,10 @@ public abstract class CameraActivity extends AppCompatActivity
         handlerThread.start();
         handler = new Handler(handlerThread.getLooper());
 
-        mp = MediaPlayer.create(this, R.raw.hun);
-        mp1 = MediaPlayer.create(this, R.raw.ten);
-        mp2 = MediaPlayer.create(this, R.raw.five);
+        fifty = MediaPlayer.create(this, R.raw.fifty_taka);
+        one_hun = MediaPlayer.create(this, R.raw.hun);
+        five_hun = MediaPlayer.create(this, R.raw.five);
+        one_thou = MediaPlayer.create(this, R.raw.one_thousand_taka);
 
  /*   mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
       @Override
@@ -558,9 +559,10 @@ public abstract class CameraActivity extends AppCompatActivity
         }
     }
 
-    boolean hun = false;
-    boolean five = false;
-    boolean ten = false;
+    boolean isFifty = false;
+    boolean isOneHun = false;
+    boolean isFiveHun = false;
+    boolean isOneThou = false;
 
     @UiThread
     protected void showResultsInBottomSheet(List<Recognition> results) {
@@ -575,21 +577,30 @@ public abstract class CameraActivity extends AppCompatActivity
                             String.format("%.2f", (100 * recognition.getConfidence())) + "%");
                 float confi = 100 * recognition.getConfidence();
                 try {
-                    if (!five && recognitionTextView.getText().toString().equalsIgnoreCase("500") && confi > 99) {
-                        mp2.start();
-                        five = true;
-                        ten = false;
-                        hun = false;
-                    } else if (!hun && recognitionTextView.getText().toString().equalsIgnoreCase("100") && confi > 99) {
-                        mp.start();
-                        hun = true;
-                        five = false;
-                        ten = false;
-                    } else if (!ten && recognitionTextView.getText().toString().equalsIgnoreCase("10") && confi > 90) {
-                        mp1.start();
-                        ten = true;
-                        five = false;
-                        hun = false;
+                    if (!isFifty && recognitionTextView.getText().toString().equalsIgnoreCase("50") && confi > 99) {
+                        fifty.start();
+                        isFifty = true;
+                        isOneHun = false;
+                        isFiveHun = false;
+                        isOneThou = false;
+                    } else if (!isOneHun && recognitionTextView.getText().toString().equalsIgnoreCase("100") && confi > 99) {
+                        one_hun.start();
+                        isFifty = false;
+                        isOneHun = true;
+                        isFiveHun = false;
+                        isOneThou = false;
+                    } else if (!isFiveHun && recognitionTextView.getText().toString().equalsIgnoreCase("500") && confi > 99) {
+                        five_hun.start();
+                        isFifty = false;
+                        isOneHun = false;
+                        isFiveHun = true;
+                        isOneThou = false;
+                    } else if (!isOneThou && recognitionTextView.getText().toString().equalsIgnoreCase("1000") && confi > 90) {
+                        one_thou.start();
+                        isFifty = false;
+                        isOneHun = false;
+                        isFiveHun = false;
+                        isOneThou = true;
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
