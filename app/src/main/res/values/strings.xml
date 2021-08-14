@@ -35,6 +35,10 @@
     <string name="muted_dark">Muted Dark</string>
     <string name="colors_palette">Colors Palette</string>
 
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+
+
     <string-array name="colorCode">
         <item>0048BA</item>
         <item>B0BF1A</item>

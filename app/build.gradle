@@ -53,4 +53,10 @@ dependencies {
 
     //select Image
     implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'com.google.truth:truth:1.0.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
 }

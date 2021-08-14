@@ -9,4 +9,10 @@
     <color name="white">#FFFFFF</color>
     <color name="green">#00E676</color>
     <color name="red">#FF1744</color>
+
+    <color name="tfe_color_primary">#ffa800</color>
+    <color name="tfe_color_primary_dark">#ff6f00</color>
+    <color name="tfe_color_accent">#425066</color>
+
+    <color name="tfe_semi_transparent">#66000000</color>
 </resources>
