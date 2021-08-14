@@ -26,6 +26,10 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ObjectDetect.DetectorActivity"
+            android:label="@string/object_detection"
+            android:screenOrientation="fullSensor" />
         <activity android:name=".IncomingObjectActivity" />
         <activity android:name=".ColorPaletteActivity" />
         <activity
