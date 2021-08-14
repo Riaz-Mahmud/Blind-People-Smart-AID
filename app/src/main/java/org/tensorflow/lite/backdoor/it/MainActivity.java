@@ -6,6 +6,8 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import org.tensorflow.lite.backdoor.it.ObjectDetect.DetectorActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,5 +24,6 @@ public class MainActivity extends AppCompatActivity {
         currencyDetectBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ClassifierActivity.class)));
         colorSelectBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ColorPaletteActivity.class)));
         incomingObjectBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, IncomingObjectActivity.class)));
+        objectDetectBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DetectorActivity.class)));
     }
 }
