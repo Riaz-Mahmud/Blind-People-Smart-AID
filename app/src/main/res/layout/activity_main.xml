@@ -184,7 +184,6 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
-                            android:src="@drawable/object_detection"
                             android:layout_gravity="center"
                             android:contentDescription="@string/todo"
                             android:scaleType="centerCrop" />
@@ -193,7 +192,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="@string/object_detection"
                             android:textColor="@color/black"
                             android:textSize="21sp" />
 
