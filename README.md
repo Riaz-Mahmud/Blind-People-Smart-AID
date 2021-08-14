@@ -1,4 +1,4 @@
-# Android Currency Detector App using TensorFlow Lite image classification
+# Android Bangladeshi Currency Detect, Object Detect App using TensorFlow Lite image classification
 
 ## Overview
 
