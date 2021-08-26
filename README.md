@@ -37,6 +37,11 @@ Teachable ML
 
 *   USB cable (to connect Android device to your computer)
 
+![233090843_626919464944441_2065100748483262971_n](https://user-images.githubusercontent.com/58476836/130997939-d66fad6e-97ea-4d8d-94fa-ecfccc12328e.jpg)
+
+![240407189_600856440900181_597519115783163963_n](https://user-images.githubusercontent.com/58476836/130997953-95632914-92f9-4b82-9477-8167ef755798.jpg)
+
+
 ## Assets folder
 _Do not delete the assets folder content_. If you explicitly deleted the
 files, choose `Build -> Rebuild` to re-download the deleted model files into the
